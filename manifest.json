@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Window.open Blocker",
+  "version": "1.0",
+  "description": "Toggle blocking of window.open",
+  "permissions": ["storage", "<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
